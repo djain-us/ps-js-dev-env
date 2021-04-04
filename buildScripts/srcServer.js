@@ -1,6 +1,6 @@
 import express from "express";
 import path from "path";
-import open from "open";
+//import open from "open";
 import webpack from "webpack";
 import config from "../webpack.config.dev";
 import webpack_dev_middleware from "webpack-dev-middleware"; 
@@ -8,7 +8,7 @@ import webpack_dev_middleware from "webpack-dev-middleware";
 const port = 3000;
 const app = express();
 const compiler = webpack(config);
-const webpack_dm = require("webpack-dev-middleware")(compiler, {
+const webpack_dm = webpack_dev_middleware(compiler, {
   publicPath: config.output.publicPath
 });
 
