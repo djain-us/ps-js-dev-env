@@ -1,0 +1,1 @@
+Readme for the JavaScript environment setup.
